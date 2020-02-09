@@ -13,7 +13,7 @@ height = 1000 - margin.top - margin.bottom;
 function newBar() {
 let size = parseInt(document.getElementById('size').value);
 count = size;
-durationTime = 2000/count;
+durationTime = 40000/count;
 array = d3.shuffle(d3.range(1,count + 1));
 unsortedArray = [...array];
 sortedArray = [];
@@ -95,13 +95,13 @@ d3.select("#rect" + d)
 
 function repeat() {
 d3.select("body")
-.transition() // First fade to green.
+.transition() // First fade to blue.
 .delay(1000)
   .style("background-color", "blue")
-.transition() // Then red.
+.transition() // Then green.
 .delay(1000)
   .style("background-color", "green")
-.transition() // Wait one second. Then brown, and remove.
+.transition() // Wait one second. Then red, and repeat.
   .delay(1000)
   .style("background-color", "red")
 .on("end", repeat);
