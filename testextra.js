@@ -24,3 +24,12 @@ function rave() {
 function erase() {
     window.location.reload(false);
 }
+
+//Changes the input box size, making it bigger
+document.getElementById('size').style.width="50px";
+document.getElementById('size').style.fontSize="14pt";
+
+document.getElementById('inputbar').style.color="white";
+document.getElementById('inputbar').style.width="200px";
+document.getElementById('inputbar').style.paddingLeft="10px";
+document.getElementById('inputbar').style.paddingRight="10px";

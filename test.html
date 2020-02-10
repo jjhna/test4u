@@ -1,32 +1,67 @@
-<!-- Made by: Dylan Tokita
-    Source: 
-    Function:  -->
+<!-- Made by: Jonathan Na
+    Source: https://getbootstrap.com/
+    Function: Creates a website that can allow the user to test out the bubblesort of different bar graphs -->
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <head>
     <link href="test.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title></title>
 </head>
 <body>
-    <header>
-        <h1 id="title">ICS 665: Assignment 2: Group 2: Bubble Sort</h1>
-    </header>
-    <hr></hr>
-        <div>
-            <label>Number of Bars: </label>
-            <input id="size" value="10"></input>
-        
-            <button id="buttons" class="button grey" onclick="erase()">Reset</button>
-            <button id="buttons" class="button blue" onclick="rave()">Rave</button>
-            <button id="buttons" class="button green" onclick="newBar(); this.disabled = true;">Make bar graph</button>
-            <button id="buttons" class="button red" onclick="requestAnimationFrame(bubbleSort);">Bubble Sort</button>
-            <button id="buttons" class="button green" onclick="newBar2(); this.disabled = true;">Make 2nd bar graph</button>
-            <button id="buttons" class="button brown" onclick="requestAnimationFrame(bubbleSort2);">2nd bar Bubble Sort</button>
-        
-        </div>
-        <hr></hr>
+        <!--Source: https://github.com/BlackrockDigital/startbootstrap-bare/blob/master/index.html  -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+              <a class="navbar-brand">ICS 665: Assignment 2: Group 2: Bubble Sort</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a id="inputbar" class="label">Number of Bars: </a>
+                <input id="size" value="10"></input>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <button id="buttons" type="button" class="btn btn-danger" onclick="erase()">Reset</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="buttons" type="button" class="btn btn-info" onclick="rave()">Rave</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="buttons" type="button" class="btn btn-success" onclick="newBar(); this.disabled = true;">Make bar graph</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="buttons" type="button" class="btn btn-success" onclick="requestAnimationFrame(bubbleSort);">Bubble Sort</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="buttons" type="button" class="btn btn-primary" onclick="newBar2(); this.disabled = true;">Make 2nd bar graph</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="buttons" type="button" class="btn btn-primary" onclick="requestAnimationFrame(bubbleSort2);">2nd bar Bubble Sort</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+          <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+        <ul class="list-unstyled">
+          <li>Bootstrap 4.3.1</li>
+          <li>jQuery 3.4.1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="testextra.js"></script>
     <script src="test.js"></script>
     <script src="test2.js"></script>
