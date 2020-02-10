@@ -33,3 +33,18 @@ document.getElementById('inputbar').style.color="white";
 document.getElementById('inputbar').style.width="200px";
 document.getElementById('inputbar').style.paddingLeft="10px";
 document.getElementById('inputbar').style.paddingRight="10px";
+
+/*
+    Made by: Jonathan Na
+    Source: https://stackoverflow.com/questions/17584515/how-to-enable-a-disabled-button-by-clicking-on-another-button/17584555
+    Function: Disable another button when clicked
+*/
+function disablebutton1() {
+    document.getElementById("buttons5").disabled = true;
+    document.getElementById("buttons2").disabled = true;
+}
+
+function disablebutton2() {
+    document.getElementById("buttons4").disabled = true;
+    document.getElementById("buttons3").disabled = true;
+}

@@ -9,6 +9,8 @@ array = 0,
 unsortedArray = [],
 sortedArray = [],
 barWidth = 0,
+finish = false;
+finish2 = false;
 xScale = d3.scaleLinear();
 
 var margin = {top: 40, right: 40, bottom: 180, left: 40},
@@ -65,21 +67,45 @@ function bubbleSort() {
 var done;
     do {
         done = false;
+        clickit();
         for (let i = 0; i < unsortedArray.length; i++) {
             if (unsortedArray[i] > unsortedArray[i + 1]) {
-
                 var temp = unsortedArray[i];
                 unsortedArray[i] = unsortedArray[i + 1];
                 unsortedArray[i + 1] = temp;
 
                 movetransition(unsortedArray[i + 1], i+1 + sortedArray);
                 movetransition(unsortedArray[i], i + sortedArray);
-                
-                done = true;
+
+                checkit(done);
             }
         }
     } while(done);
     return unsortedArray;
+}
+
+/*
+    Made by: Jonathan Na
+    Source: https://www.reddit.com/r/incremental_games/comments/4ontg9/javascript_autoclicker/
+    Function: autoclicks until array is sorted
+*/
+function clickit() {
+    setInterval(() => {
+        document.getElementById('buttons2').click();
+    }, 5000);
+}
+
+/*
+    Made by: Jonathan Na
+    Param: done = false
+    Function: Checks if aray has been sorted correctly
+*/
+function checkit(done) {
+    for (let i = 0; i < unsortedArray.length; i++) {
+        if (unsortedArray[i] < unsortedArray[i + 1]) {
+            done = true;
+        }
+    }
 }
 
     /*

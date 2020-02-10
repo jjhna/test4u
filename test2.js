@@ -12,7 +12,6 @@ var count = 0,
     width = 900,
     height = 500,
     unsortedArray = [],
-    sortedArray = [];
     x = d3.scaleBand(),
     y = d3.scaleLinear();
 var svg;
@@ -23,7 +22,6 @@ function newBar2() {
     durationTime = 40000/count;
     array = d3.shuffle(d3.range(1,count + 1));
     unsortedArray = [...array];
-    sortedArray = [];
     barWidth = width/count;
 
     x = d3.scaleBand()
@@ -77,20 +75,44 @@ function newBar2() {
     var done;
     do {
         done = false;
+        clickit2();
         for (let i = 0; i < unsortedArray.length; i++) {
             if (unsortedArray[i] > unsortedArray[i + 1]) {
 
                 var temp = unsortedArray[i];
                 unsortedArray[i] = unsortedArray[i + 1];
                 unsortedArray[i + 1] = temp;
-                
-                done = true;
+                arrayBounce();
+                checkit2(done);
             }
         }
     } while(done);
-    arrayBounce();
     return unsortedArray;
    }
+
+   /*
+    Made by: Jonathan Na
+    Source: https://www.reddit.com/r/incremental_games/comments/4ontg9/javascript_autoclicker/
+    Function: autoclicks until array is sorted
+    */
+    function clickit2() {
+        setInterval(() => {
+            document.getElementById('buttons3').click();
+        }, 5000);
+    }
+
+    /*
+        Made by: Jonathan Na
+        Param: done = false
+        Function: Checks if aray has been sorted correctly
+    */
+    function checkit2(done) {
+        for (let i = 0; i < unsortedArray.length; i++) {
+            if (unsortedArray[i] < unsortedArray[i + 1]) {
+                done = true;
+            }
+        }
+    }
 
    /*
     Made by: Jonathan Na
