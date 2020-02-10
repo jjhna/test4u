@@ -56,14 +56,6 @@ function newBar() {
 
 /*
     Made by: Jonathan Na
-    Function: Refreshes the webpage
-*/
-function erase() {
-    window.location.reload(false);
-}
-
-/*
-    Made by: Jonathan Na
     Source: https://bl.ocks.org/alexmacy/770f14e11594623320db1270361331dc 
     and https://www.w3resource.com/javascript-exercises/javascript-function-exercise-24.php  
     Function: Performs the bubble sort from the random array, note: instead of using an if statement
@@ -93,7 +85,7 @@ var done;
     /*
         Made by: Jonathan Na
         Source: https://bl.ocks.org/alexmacy/770f14e11594623320db1270361331dc 
-        Function: Performs the bubble sort 
+        Function: Performs the d3 translate and transition moves
     */
     function movetransition(original, other) {
         d3.select("#text" + original)
@@ -105,23 +97,4 @@ var done;
             .transition().duration(durationTime)
             .attr("transform", "translate(" + (xScale(other-1)) + ", 0)")
             .style('fill', 'blue')
-}
-
-/*
-    Made by: Jonathan Na
-    Source: https://bl.ocks.org/d3noob/bf44061b1d443f455b3f857f82721372 
-    Function: Changes the background color of the webpage and will endlessly repeat
-*/
-function rave() {
-    d3.select("body")
-    .transition()
-    .delay(1000)
-    .style("background-color", "purple")
-    .transition() 
-    .delay(1000)
-    .style("background-color", "green")
-    .transition() 
-    .delay(1000)
-    .style("background-color", "red")
-    .on("end", rave);
 }

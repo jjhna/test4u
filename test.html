@@ -16,17 +16,18 @@
             <label>Number of Bars: </label>
             <input id="size" value="10"></input>
         
-            <button id="buttons" class="button blue" onclick="rave()">Rave</button>
             <button id="buttons" class="button grey" onclick="erase()">Reset</button>
+            <button id="buttons" class="button blue" onclick="rave()">Rave</button>
             <button id="buttons" class="button green" onclick="newBar(); this.disabled = true;">Make bar graph</button>
-            <button id="buttons" class="button red" onclick="requestAnimationFrame(bubbleSort); this.disabled = true;">Bubble Sort</button>
+            <button id="buttons" class="button red" onclick="requestAnimationFrame(bubbleSort);">Bubble Sort</button>
             <button id="buttons" class="button green" onclick="newBar2(); this.disabled = true;">Make 2nd bar graph</button>
-            <button id="buttons" class="button brown" onclick="upBar(); this.disabled = true;">Make up bar graph</button>
+            <button id="buttons" class="button brown" onclick="requestAnimationFrame(bubbleSort2);">2nd bar Bubble Sort</button>
         
         </div>
         <hr></hr>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="testextra.js"></script>
     <script src="test.js"></script>
     <script src="test2.js"></script>
 </body>
