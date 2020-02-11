@@ -33,7 +33,7 @@ function newBar2() {
             .domain([0, d3.max(unsortedArray)])
             .range([0, height]);
 
-    svg = d3.select("body")
+    svg = d3.select("#mychart")
             .append("svg")
             .attr("width", width)
             .attr("height", height);
